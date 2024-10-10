@@ -1,22 +1,356 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Source: https://github.com/google/go-containerregistry
+Upstream-Name: go-containerregistry
+Upstream-Contact: https://github.com/google/go-containerregistry/issues
+Files-Excluded:
+  vendor
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: cmd/crane/cmd/*
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: cmd/crane/depcheck_test.go
+  cmd/crane/main.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: cmd/crane/help/main.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: cmd/gcrane/cmd/*
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: cmd/gcrane/depcheck_test.go
+  cmd/gcrane/main.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: cmd/krane/main.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: cmd/registry/main.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: debian/*
+Copyright: 2023, Reinhard Tartler <siretart@tauware.de>
+License: Apache-2.0
+Comment: Debian packaging is licensed under the same terms as upstream
+
+Files: hack/*
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: hack/update-dots.sh
+Copyright: 2019, The original author or authors
+License: Apache-2.0
+
+Files: internal/*
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: internal/retry/wait/*
+Copyright: 2014, The Kubernetes Authors.
+License: Apache-2.0
+
+Files: pkg/*
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/authn/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/authn/anon.go
+  pkg/authn/anon_test.go
+  pkg/authn/auth.go
+  pkg/authn/authn.go
+  pkg/authn/authn_test.go
+  pkg/authn/basic.go
+  pkg/authn/basic_test.go
+  pkg/authn/bearer.go
+  pkg/authn/bearer_test.go
+  pkg/authn/doc.go
+  pkg/authn/keychain.go
+  pkg/authn/keychain_test.go
+  pkg/authn/multikeychain.go
+  pkg/authn/multikeychain_test.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/authn/github/*
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/authn/k8schain/doc.go
+  pkg/authn/k8schain/k8schain.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/authn/k8schain/tests/*
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/authn/kubernetes/*
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/authn/kubernetes/go.mod
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/legacy/tarball/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/legacy/tarball/doc.go
+  pkg/legacy/tarball/write.go
+  pkg/legacy/tarball/write_test.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/name/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/name/check.go
+  pkg/name/digest.go
+  pkg/name/digest_test.go
+  pkg/name/doc.go
+  pkg/name/errors.go
+  pkg/name/errors_test.go
+  pkg/name/options.go
+  pkg/name/ref.go
+  pkg/name/ref_test.go
+  pkg/name/registry.go
+  pkg/name/registry_test.go
+  pkg/name/repository.go
+  pkg/name/repository_test.go
+  pkg/name/tag.go
+  pkg/name/tag_test.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/name/internal/*
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/registry/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/registry/blobs.go
+  pkg/registry/compatibility_test.go
+  pkg/registry/depcheck_test.go
+  pkg/registry/error.go
+  pkg/registry/manifest.go
+  pkg/registry/registry.go
+  pkg/registry/registry_test.go
+  pkg/registry/tls.go
+  pkg/registry/tls_test.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/v1/daemon/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/v1/daemon/doc.go
+  pkg/v1/daemon/image.go
+  pkg/v1/daemon/image_test.go
+  pkg/v1/daemon/options.go
+  pkg/v1/daemon/write.go
+  pkg/v1/daemon/write_test.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/v1/empty/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/v1/empty/doc.go
+  pkg/v1/empty/image.go
+  pkg/v1/empty/image_test.go
+  pkg/v1/empty/index.go
+  pkg/v1/empty/index_test.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/v1/fake/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/v1/google/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/v1/google/auth.go
+  pkg/v1/google/auth_test.go
+  pkg/v1/google/doc.go
+  pkg/v1/google/keychain.go
+  pkg/v1/google/list.go
+  pkg/v1/google/list_test.go
+  pkg/v1/google/options.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/v1/layout/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/v1/layout/blob.go
+  pkg/v1/layout/doc.go
+  pkg/v1/layout/image.go
+  pkg/v1/layout/image_test.go
+  pkg/v1/layout/index.go
+  pkg/v1/layout/index_test.go
+  pkg/v1/layout/options.go
+  pkg/v1/layout/write.go
+  pkg/v1/layout/write_test.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/v1/layout/layoutpath.go
+  pkg/v1/layout/read.go
+  pkg/v1/layout/read_test.go
+Copyright: 2019, The original author or authors
+License: Apache-2.0
+
+Files: pkg/v1/mutate/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/v1/mutate/doc.go
+  pkg/v1/mutate/image.go
+  pkg/v1/mutate/index.go
+  pkg/v1/mutate/index_test.go
+  pkg/v1/mutate/mutate.go
+  pkg/v1/mutate/mutate_test.go
+  pkg/v1/mutate/rebase.go
+  pkg/v1/mutate/rebase_test.go
+  pkg/v1/mutate/whiteout_test.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/v1/partial/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/v1/partial/compressed.go
+  pkg/v1/partial/compressed_test.go
+  pkg/v1/partial/configlayer_test.go
+  pkg/v1/partial/doc.go
+  pkg/v1/partial/image.go
+  pkg/v1/partial/index.go
+  pkg/v1/partial/index_test.go
+  pkg/v1/partial/uncompressed.go
+  pkg/v1/partial/uncompressed_test.go
+  pkg/v1/partial/with.go
+  pkg/v1/partial/with_test.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/v1/remote/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/v1/remote/catalog.go
+  pkg/v1/remote/catalog_test.go
+  pkg/v1/remote/check.go
+  pkg/v1/remote/check_e2e_test.go
+  pkg/v1/remote/check_test.go
+  pkg/v1/remote/delete.go
+  pkg/v1/remote/delete_test.go
+  pkg/v1/remote/descriptor.go
+  pkg/v1/remote/descriptor_test.go
+  pkg/v1/remote/doc.go
+  pkg/v1/remote/error_roundtrip_test.go
+  pkg/v1/remote/image.go
+  pkg/v1/remote/image_test.go
+  pkg/v1/remote/index.go
+  pkg/v1/remote/index_test.go
+  pkg/v1/remote/layer.go
+  pkg/v1/remote/layer_test.go
+  pkg/v1/remote/list.go
+  pkg/v1/remote/list_test.go
+  pkg/v1/remote/mount.go
+  pkg/v1/remote/mount_test.go
+  pkg/v1/remote/multi_write.go
+  pkg/v1/remote/multi_write_test.go
+  pkg/v1/remote/options.go
+  pkg/v1/remote/progress.go
+  pkg/v1/remote/progress_test.go
+  pkg/v1/remote/referrers.go
+  pkg/v1/remote/referrers_test.go
+  pkg/v1/remote/write.go
+  pkg/v1/remote/write_test.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/v1/remote/transport/basic.go
+  pkg/v1/remote/transport/basic_test.go
+  pkg/v1/remote/transport/bearer.go
+  pkg/v1/remote/transport/bearer_test.go
+  pkg/v1/remote/transport/doc.go
+  pkg/v1/remote/transport/error.go
+  pkg/v1/remote/transport/error_test.go
+  pkg/v1/remote/transport/logger.go
+  pkg/v1/remote/transport/logger_test.go
+  pkg/v1/remote/transport/ping.go
+  pkg/v1/remote/transport/ping_test.go
+  pkg/v1/remote/transport/retry.go
+  pkg/v1/remote/transport/retry_test.go
+  pkg/v1/remote/transport/schemer.go
+  pkg/v1/remote/transport/scope.go
+  pkg/v1/remote/transport/transport.go
+  pkg/v1/remote/transport/transport_test.go
+  pkg/v1/remote/transport/useragent.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/v1/stream/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/v1/stream/layer.go
+  pkg/v1/stream/layer_test.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+Files: pkg/v1/tarball/*
+Copyright: 2018, Google
+License: Apache-2.0
+
+Files: pkg/v1/tarball/doc.go
+  pkg/v1/tarball/image.go
+  pkg/v1/tarball/image_test.go
+  pkg/v1/tarball/layer.go
+  pkg/v1/tarball/layer_test.go
+  pkg/v1/tarball/progress_test.go
+  pkg/v1/tarball/write.go
+  pkg/v1/tarball/write_test.go
+Copyright: 2018-2023, Google LLC
+License: Apache-2.0
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+ http://www.apache.org/licenses/LICENSE-2.0
  .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
- .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+Comment:
+ On Debian systems, the complete text of the Apache version 2.0 license
+ can be found in "/usr/share/common-licenses/Apache-2.0".

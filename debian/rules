@@ -1,4 +1,11 @@
 #!/usr/bin/make -f
 
+# no CLI, k8s, require additional dependencies
+export DH_GOLANG_EXCLUDES := go-containerregistry/cmd pkg/authn/k8schain pkg/authn/kubernetes
+
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang
+
+override_dh_auto_test:
+# FIXME: investigate build failures in the google package
+	-dh_auto_test

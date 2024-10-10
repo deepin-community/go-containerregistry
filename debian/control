@@ -1,15 +1,46 @@
-Source: template-repository
-Section: unknown
+Source: go-containerregistry
+Section: golang
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Reinhard Tartler <siretart@tauware.de>
+Rules-Requires-Root: no
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-golang,
+               golang-any,
+               golang-github-containerd-stargz-snapshotter-dev,
+               golang-github-docker-distribution-dev,
+               golang-github-docker-docker-dev,
+               golang-github-google-go-cmp-dev,
+               golang-github-klauspost-compress-dev,
+               golang-github-mitchellh-go-homedir-dev,
+               golang-github-opencontainers-go-digest-dev,
+               golang-github-opencontainers-image-spec-dev,
+               golang-github-spf13-cobra-dev,
+               golang-golang-x-oauth2-google-dev,
+               golang-golang-x-sync-dev,
+               golang-golang-x-tools-dev
+Testsuite: autopkgtest-pkg-go
+Standards-Version: 4.7.0
+Vcs-Browser: https://salsa.debian.org/go-team/packages/go-containerregistry
+Vcs-Git: https://salsa.debian.org/go-team/packages/go-containerregistry.git
+Homepage: https://github.com/google/go-containerregistry
+XS-Go-Import-Path: github.com/google/go-containerregistry
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-google-go-containerregistry-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: golang-github-containerd-stargz-snapshotter-dev,
+         golang-github-docker-distribution-dev,
+         golang-github-docker-docker-dev,
+         golang-github-google-go-cmp-dev,
+         golang-github-klauspost-compress-dev,
+         golang-github-mitchellh-go-homedir-dev,
+         golang-github-opencontainers-go-digest-dev,
+         golang-github-opencontainers-image-spec-dev,
+         golang-github-spf13-cobra-dev,
+         golang-golang-x-oauth2-google-dev,
+         golang-golang-x-sync-dev,
+         golang-golang-x-tools-dev,
+         ${misc:Depends}
+Description: Go library and CLIs for working with container registries (library)
+ This library contains golang code for interacting with container registries
