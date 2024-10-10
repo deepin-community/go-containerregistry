@@ -1,5 +1,23 @@
-template-repository (1.0-1) unstable; urgency=medium
+go-containerregistry (0.20.1+ds1-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * New upstream version 0.20.1
+  * Reorder fields in debian/control and debian/copyright
+  * Use dh-sequence-golang instead of dh-golang and --with=golang
+  * Bump Standards-Version to 4.7.0 (no change)
+  * Change -dev package Architecture from all to any
+  * Mark library package with "Multi-Arch: foreign"
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Anthony Fok <foka@debian.org>  Mon, 19 Aug 2024 02:19:48 -0600
+
+go-containerregistry (0.14.0+ds1-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Reinhard Tartler <siretart@tauware.de>  Tue, 18 Jul 2023 19:39:02 -0400
+
+go-containerregistry (0.14.0+ds1-1) experimental; urgency=medium
+
+  * Initial release (Closes: #1034480)
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sun, 16 Apr 2023 14:50:05 -0400
